@@ -17,16 +17,16 @@ Palladium Megaverse© Character Sheet <br>
                         <table>
                             <tr>
                                 <td><div class="sheet-stats-character-name"><h5>Character Name</h5></div></td>
-                                <td><div class="sheet-stats-character-name"><input class="sheet-input-center-aligned" type="text" value="" name="attr_character_name" title="@{character_name}" /></div></td>    			
+                                <td><div class="sheet-stats-character-name"><input class="sheet-input-center-aligned" type="text" value="" name="attr_character_name" title="@{character_name}" /></div></td>
                             </tr>
                             <tr>
                                 <td><div class="sheet-stats-nickname"><h5>True Name</h5></div></td>
-                                <td><div class="sheet-stats-nickname"><input class="sheet-input-center-aligned" type="text" value="" name="attr_truename_name" title="@{truename_name}" /></div></td>		
+                                <td><div class="sheet-stats-nickname"><input class="sheet-input-center-aligned" type="text" value="" name="attr_truename_name" title="@{truename_name}" /></div></td>
                             </tr>
                             <tr>
                                 <td><div class="sheet-stats-character-name"><h5>Race</h5></div></td>
-                                <td><div class="sheet-stats-character-name"><input class="sheet-input-center-aligned" type="text" value="" name="attr_character_race" title="@{character_race}" /></div></td>    	
-                            </tr>    			
+                                <td><div class="sheet-stats-character-name"><input class="sheet-input-center-aligned" type="text" value="" name="attr_character_race" title="@{character_race}" /></div></td>
+                            </tr>
                                 <td><div class="sheet-stats-nickname"><h5>O.C.C.</h5></div></td>
                                 <td><div class="sheet-stats-nickname"><input class="sheet-input-center-aligned" type="text" value="" name="attr_occ" title="@{occ)" /></div></td>
                             </tr>
@@ -73,10 +73,10 @@ Palladium Megaverse© Character Sheet <br>
                                 <td><input class="attribute" type="text" value="" name="attr_character_familyorigin" title="@{character_familyorigin}" /></td>
                             </tr>
                             <tr>
-                                <td><h5>Enviorment</h5></td>
-                                <td><input class="attribute" type="text" value="" name="attr_character_enviorment" title="@{character_environment}" /></td>
+                                <td><h5>Environment</h5></td>
+                                <td><input class="attribute" type="text" value="" name="attr_character_environment" title="@{character_environment}" /></td>
                             </tr>
-                                                        <tr>
+                            <tr>
                                 <td><h5>Insanity, if any</h5></td>
                                 <td><input class="attribute" type="text" value="" name="attr_character_insanity" /></td>
                             </tr>
@@ -122,7 +122,7 @@ Palladium Megaverse© Character Sheet <br>
                             </tr>
                         </table>
                         <table>
-                        <tr>
+                            <tr>
                                 <td><h5>Invoke Trust/Intimidate</h5></td>
                                 <td><input class="attribute" type="number" value="0" name="attr_invoke_trust" title="@{invoke_trust}" placeholder="0"/>%</td>
                                 <td><div class="sheet-ability"><button type="roll" value="&{template:default} {{name=@{character_name}'s Invoke Trust/Intimidate check}} {{[[d100<@{invoke_trust}]]}} {{1 is a Success=0 is a Failure}}"></button></div></td>
@@ -201,7 +201,7 @@ Palladium Megaverse© Character Sheet <br>
                             </tr>
                             <tr>
                                 <td><h5>Perception</h5></td>
-                                <td><input type="number" value"0" name="attr_perception" title="@{perception}" /></td>
+                                <td><input type="number" value="((@{iq} + @{ma} + @{me} + @{pp})/4)" disabled="true" name="attr_perception" title="@{perception}" /></td>
                                 <td><button type="roll" value="&{template:default} {{@{character_name}'s Perception=[[1d20+@{perception}]]}}" /></td>
                             </tr>
                             <tr>
@@ -270,21 +270,21 @@ Palladium Megaverse© Character Sheet <br>
                         <td><input class="attribute" type="number" value="" name="attr_movement_at_max" title="@{movement_at_max}" style="width:60px" />minutes</td>
                     </tr>
                 </table>
-            </fieldset>    
+            </fieldset>
         </div>
 	</div>
 </div>
-    
+
 <!equipment>
 <div class="sheet-tab-content sheet-tab2">
     <h1>Equipment</h1>
     <!Handheld weapons>
     <div class="sheet-tabbed-panel">
-        <div class="sheet-row-panel"> 
+        <div class="sheet-row-panel">
             <input type="checkbox" name="attr_weapon-toggle" title="@{repeating_weapon_$#_(etc)}" class="sheet-arrow" />
             <h4>Weapons</h4>
             <div class="body">
-                <fieldset class="repeating_weapon"> 
+                <fieldset class="repeating_weapon">
                     <table style="width:75%">
                         <tr>
                             <td><h5>Weapon</h5></td>
@@ -316,7 +316,7 @@ Palladium Megaverse© Character Sheet <br>
                             <td><div class="sheet-inventory-weapon"><input class="sheet-input-center-aligned" type="text" value="" name="attr_weapon_attack_0" title="@{weapon_attack_0}" style="width:80px" placeholder="Attack option" /></div></td>
                             <td><div class="sheet-inventory-weapon"><button type="roll" name="attr_weapon_attack_0_roll" title="@{weapon_attack_0_roll}" value="&{template:default} {{name=@{weapon_name} @{weapon_attack_0}}} {{Damage=[[@{weapon_damage_0}]] @{weapon_damage_type_0}}}"></button></div></td>
                             <td><div class="sheet-inventory-weapon"><input class="sheet-input-center-aligned" type="text" value="" name="attr_weapon_attack_1" title="@{weapon_attack_1}" style="width:80px" placeholder="Attack option" /></div></td>
-                            <td><div class="sheet-inventory-weapon"><button type="roll" name="attr_weapon_attack_1_roll" title="@{weapon_attack_1_roll}" value="&{template:default} {{name=@{weapon_name} @{weapon_attack_1}}} {{Damage=[[@{weapon_damage_1}]] @{weapon_damage_type_1}}}"></button></div></td>                            
+                            <td><div class="sheet-inventory-weapon"><button type="roll" name="attr_weapon_attack_1_roll" title="@{weapon_attack_1_roll}" value="&{template:default} {{name=@{weapon_name} @{weapon_attack_1}}} {{Damage=[[@{weapon_damage_1}]] @{weapon_damage_type_1}}}"></button></div></td>
                             <td><div class="sheet-inventory-weapon"><input class="sheet-input-center-aligned" type="text" value="" name="attr_weapon_attack_2" title="@{weapon_attack_2}" style="width:80px" placeholder="Attack option" /></div></td>
                             <td><div class="sheet-inventory-weapon"><button type="roll" name="attr_weapon_attack_2_roll" title="@{weapon_attack_2_roll}" value="&{template:default} {{name=@{weapon_name} @{weapon_attack_2}}} {{Damage=[[@{weapon_damage_2}]] @{weapon_damage_type_2}}}"></button></div></td>
                             <td><div class="sheet-inventory-weapon"><input class="sheet-input-center-aligned" type="text" value="" name="attr_weapon_attack_3" title="@{weapon_attack_3}" style="width:80px" placeholder="Attack option" /></div></td>
@@ -341,7 +341,7 @@ Palladium Megaverse© Character Sheet <br>
                             <td><h5>Payload</h5></td>
                             <td></td>
                             <td><h5>Range</h5></td>
-                            
+
                         </tr>
                         <tr>
                             <td></td>
@@ -354,18 +354,18 @@ Palladium Megaverse© Character Sheet <br>
                         <tr>
                             <textarea wrap="soft" class="sheet-textarea" value="" name="attr_weapon_details" title="@{weapon_details}" placeholder="Weapon Details" ></textarea>
                         </tr>
-                    </table>            
+                    </table>
                 </fieldset>
             </div>
         </div>
     </div>
     <!Body armor>
     <div class="sheet-tabbed-panel">
-        <div class="sheet-row-panel"> 
+        <div class="sheet-row-panel">
             <input type="checkbox" name="attr_armor-toggle" title="@{repeating_armor_$#_(etc)}" class="sheet-arrow" />
             <h4>Armor</h4>
             <div class="body">
-                <fieldset class="repeating_armor"> 
+                <fieldset class="repeating_armor">
                     <table style="width:80%">
                         <tr>
                             <td><h5>Armor</h5></td>
@@ -403,7 +403,7 @@ Palladium Megaverse© Character Sheet <br>
                         <tr>
                             <td></td>
                             <td>L.Leg</td>
-                            <td>R.Leg</td>                           
+                            <td>R.Leg</td>
                         </tr>
                         <tr>
                             <td></td>
@@ -430,18 +430,18 @@ Palladium Megaverse© Character Sheet <br>
                         <tr>
                             <textarea wrap="soft" class="sheet-textarea" value="" name="attr_armor_details" placeholder="Armor Details" ></textarea>
                         </tr>
-                    </table>            
+                    </table>
                 </fieldset>
             </div>
         </div>
     </div>
     <!powerarmor/robot weapons>
     <div class="sheet-tabbed-panel">
-        <div class="sheet-row-panel"> 
+        <div class="sheet-row-panel">
             <input type="checkbox" name="attr_robotweapon-toggle" title="@{repeating_robotweapon_$#_(etc)}" class="sheet-arrow" />
             <h4>Power Armor/Robot/Vehicle Weapons</h4>
             <div class="body">
-                <fieldset class="repeating_robotweapon"> 
+                <fieldset class="repeating_robotweapon">
                 <!robot weapon information>
                 <table style="width:80%">
                     <!robot weapon strike information>
@@ -476,7 +476,7 @@ Palladium Megaverse© Character Sheet <br>
                         <td><div class="sheet-inventory-robotweapon"><input class="sheet-input-center-aligned" type="text" value="" name="attr_robotweapon_attack_0" title="@{robotweapon_attack_0}" style="width:80px" placeholder="Attack option" /></div></td>
                         <td><div class="sheet-inventory-robotweapon"><button type="roll" name="attr_robotweapon_attack_0_roll" title="@{robotweapon_attack_0_roll" value="&{template:default} {{name=@{robotweapon_name} @{robotweapon_attack_0}}} {{Damage=[[@{robotweapon_damage_0}]] @{robotweapon_damage_type_0}}}"></button></div></td>
                         <td><div class="sheet-inventory-robotweapon"><input class="sheet-input-center-aligned" type="text" value="" name="attr_robotweapon_attack_1" title="@{robotweapon_attack_1}" style="width:80px" placeholder="Attack option" /></div></td>
-                        <td><div class="sheet-inventory-robotweapon"><button type="roll" name="attr_robotweapon_attack_1_roll" title="@{robotweapon_attack_1_roll" value="&{template:default} {{name=@{robotweapon_name} @{robotweapon_attack_1}}} {{Damage=[[@{robotweapon_damage_1}]] @{robotweapon_damage_type_1}}}"></button></div></td>                            
+                        <td><div class="sheet-inventory-robotweapon"><button type="roll" name="attr_robotweapon_attack_1_roll" title="@{robotweapon_attack_1_roll" value="&{template:default} {{name=@{robotweapon_name} @{robotweapon_attack_1}}} {{Damage=[[@{robotweapon_damage_1}]] @{robotweapon_damage_type_1}}}"></button></div></td>
                         <td><div class="sheet-inventory-robotweapon"><input class="sheet-input-center-aligned" type="text" value="" name="attr_robotweapon_attack_2" title="@{robotweapon_attack_2}" style="width:80px" placeholder="Attack option" /></div></td>
                         <td><div class="sheet-inventory-robotweapon"><button type="roll" name="attr_robotweapon_attack_2_roll" title="@{robotweapon_attack_2_roll" value="&{template:default} {{name=@{robotweapon_name} @{robotweapon_attack_2}}} {{Damage=[[@{robotweapon_damage_2}]] @{robotweapon_damage_type_2}}}"></button></div></td>
                         <td><div class="sheet-inventory-robotweapon"><input class="sheet-input-center-aligned" type="text" value="" name="attr_robotweapon_attack_3" title="@{robotweapon_attack_3}" style="width:80px" placeholder="Attack option" /></div></td>
@@ -526,12 +526,12 @@ Palladium Megaverse© Character Sheet <br>
     </div>
     <!Powerarmor/Robot>
     <div class="sheet-tabbed-panel">
-        <div class="sheet-row-panel"> 
+        <div class="sheet-row-panel">
             <input type="checkbox" name="attr_robot-toggle" title="@{repeating_robot_$#_(etc)}" class="sheet-arrow" />
             <h4>Power Armor/Robot/Vehicle</h4>
             <div class="body">
                 <!powerarmor/robot details>
-                <fieldset class="repeating_robot"> 
+                <fieldset class="repeating_robot">
                     <!power armor/robot information>
                     <table style="width:80%">
                         <!basic information>
@@ -619,11 +619,11 @@ Palladium Megaverse© Character Sheet <br>
     </div>
     <!Gear>
     <div class="sheet-tabbed-panel">
-        <div class="sheet-row-panel"> 
+        <div class="sheet-row-panel">
             <input type="checkbox" name="attr_gear-toggle" title="@{repeating_gear_$#_(etc)" class="sheet-arrow" />
             <h4>Gear</h4>
             <div class="body">
-                <fieldset class="repeating_gear"> 
+                <fieldset class="repeating_gear">
                     <table style="width:75%">
                         <tr>
                             <td><h5>Item</h5></td>
@@ -640,18 +640,18 @@ Palladium Megaverse© Character Sheet <br>
                         <tr>
                             <textarea wrap="soft" class="sheet-textarea" value="" name="attr_gear_details" title="@{gear_details}" placeholder="Gear Details" ></textarea>
                         </tr>
-                    </table>            
+                    </table>
                 </fieldset>
             </div>
         </div>
     </div>
     <!Consumable>
     <div class="sheet-tabbed-panel">
-        <div class="sheet-row-panel"> 
+        <div class="sheet-row-panel">
             <input type="checkbox" name="attr_consumable-toggle" title="@{repeating_consumable_$#_(etc)}" class="sheet-arrow" />
             <h4>Consumables</h4>
             <div class="body">
-                <fieldset class="repeating_consumable"> 
+                <fieldset class="repeating_consumable">
                     <table style="width:75%">
                         <tr>
                             <td><h5>Consumable Item</h5></td>
@@ -668,18 +668,18 @@ Palladium Megaverse© Character Sheet <br>
                         <tr>
                             <textarea wrap="soft" class="sheet-textarea" value="" name="attr_consumable_details" title="@{consumable_details}"  placeholder="Consumable Item Details" ></textarea>
                         </tr>
-                    </table>            
+                    </table>
                 </fieldset>
             </div>
         </div>
     </div>
     <!Wealth>
     <div class="sheet-tabbed-panel">
-        <div class="sheet-row-panel"> 
+        <div class="sheet-row-panel">
             <input type="checkbox" name="attr_wealth-toggle" title="@{repeating_wealth_$#_(etc)}" class="sheet-arrow" />
             <h4>Wealth</h4>
             <div class="body">
-                <fieldset class="repeating_wealth"> 
+                <fieldset class="repeating_wealth">
                     <table style="width:75%">
                         <tr>
                             <td><h5>Wealth Entry</h5></td>
@@ -696,7 +696,7 @@ Palladium Megaverse© Character Sheet <br>
                         <tr>
                             <textarea wrap="soft" class="sheet-textarea" value="" name="attr_wealth_details" title="@{wealth_details}" placeholder="Wealth item details, if any" ></textarea>
                         </tr>
-                    </table>            
+                    </table>
                 </fieldset>
             </div>
         </div>
@@ -709,7 +709,7 @@ Palladium Megaverse© Character Sheet <br>
     <td>Spell Strength<div class="sheet-ability"><input class="sheet-input-center-aligned" type="text" value="0" name="attr_spell_strength" title="@{spell_strength}" style="width:80px" /></div></td>
     <div class="sheet-tabbed-panel">
         <div class="sheet-row-panel">
-            <fieldset class="repeating_ability"> 
+            <fieldset class="repeating_ability">
                     <table style="width:90%">
                         <tr>
                             <td><h5>Name</h5></td>
@@ -863,7 +863,7 @@ Palladium Megaverse© Character Sheet <br>
     <h1>Combat</h1>
     <!saving throws>
     <div class="sheet-tabbed-panel">
-        <div class="sheet-row-panel"> 
+        <div class="sheet-row-panel">
             <input type="checkbox" name="attr_saves-toggle" class="sheet-arrow" />
             <h4>Saves</h4>
             <div class="body">
@@ -972,11 +972,11 @@ Palladium Megaverse© Character Sheet <br>
     </div>
     <!ancient weapon profs>
     <div class="sheet-tabbed-panel">
-        <div class="sheet-row-panel"> 
+        <div class="sheet-row-panel">
             <input type="checkbox" name="attr_ancient_weapon-toggle" title="@{repeating_weaponancient_$#_(etc)}" class="sheet-arrow" />
             <h4>Ancient Weapon Proficencies</h4>
             <div class="body">
-                <fieldset class="repeating_weaponancient"> 
+                <fieldset class="repeating_weaponancient">
                     <table style="width:75%">
                         <tr>
                             <td><div class="sheet-inventory-weapon"><input class="sheet-input-center-aligned" type="text" value="" name="attr_weapon_name_" title="@{weapon_name}" placeholder="Weapon Proficiency" /></div></td>
@@ -991,32 +991,32 @@ Palladium Megaverse© Character Sheet <br>
                             <td><h5>Disarm</h5></td>
                             <td><div class="sheet-inventory-weapon"><input class="sheet-input-center-aligned" type="number" value="0" name="attr_weapon_disarm" title="@{weapon_disarm}" style="width:60px" placeholder="0" /></div></td>
                         </tr>
-                    </table>         
+                    </table>
                 </fieldset>
             </div>
         </div>
     </div>
     <!modern weapon profs>
     <div class="sheet-tabbed-panel">
-        <div class="sheet-row-panel"> 
+        <div class="sheet-row-panel">
             <input type="checkbox" name="attr_modern_weapon-toggle" title="@{repeating_weaponmodern_$#_(etc)}" class="sheet-arrow" />
             <h4>Modern Weapon Proficencies</h4>
             <div class="body">
-                <fieldset class="repeating_weaponmodern"> 
+                <fieldset class="repeating_weaponmodern">
                     <table style="width:75%">
                         <tr>
                             <td><div class="sheet-inventory-weapon"><input class="sheet-input-center-aligned" type="text" value="" name="attr_weapon_name" title="@{weapon_name}" placeholder="Weapon Proficiency" /></div></td>
                             <td><h5>Strike</h5></td>
                             <td><div class="sheet-inventory-weapon"><input class="sheet-input-center-aligned" type="number" value="0" name="attr_weapon_strike" title="@{weapon_strike}" /></div></td>
                         </tr>
-                    </table>         
+                    </table>
                 </fieldset>
             </div>
         </div>
     </div>
     <!hand to hand skill>
     <div class="sheet-tabbed-panel">
-        <div class="sheet-row-panel"> 
+        <div class="sheet-row-panel">
             <input type="checkbox" name="attr_combatskill-toggle" class="sheet-arrow" />
             <h4>Hand to Hand Combat Skill</h4>
             <div class="body">
@@ -1046,7 +1046,7 @@ Palladium Megaverse© Character Sheet <br>
                                 <td><input type="number" name="attr_hth_strike" title="@{hth_strike}" value="0" /></td>
                                 <td><button type="roll" name="attr_hth_strike_roll" title="@{hth_strike_roll}"  value="&{template:default} {{name=@{character_name}'s HtH Strike}} {{Strike=[[1d20cs>@{critical}+@{hth_strike}+?{Situational Bonus|0}]]}}"></button></td>
                             </tr>
-                            
+
                             <tr>
                                 <td><h5>Parry</h5></td>
                                 <td><input type="number" name="attr_hth_parry" title="@{hth_parry}" value="0" /></td>
@@ -1067,7 +1067,7 @@ Palladium Megaverse© Character Sheet <br>
                                 <td><h5>Entangle</h5></td>
                                 <td><input type="number" name="attr_hth_entangle" title="@{hth_entangle}" value="0" /></td>
                                 <td><button type="roll" name="attr_hth_entangle_roll" title="@{hth_entangle_roll}" value="&{template:default} {{name=@{character_name}'s Entangle}} {{Entangle=[[1d20cs>20+@{hth_entangle}+?{Situational Bonus|0}]]}}"></button></td>
-                            </tr>    
+                            </tr>
                             <tr>
                                 <td><h5>Roll w Punch, Fall, or Impact</h5></td>
                                 <td><input type="number" name="attr_hth_roll" title="@{hth_roll}" value="0" /></td>
@@ -1120,8 +1120,8 @@ Palladium Megaverse© Character Sheet <br>
                                     <td></td>
                                     <td></td>
                                     <td><h5>Power Attack</h5></td>
-                                </tr>    
-                                <tr>    
+                                </tr>
+                                <tr>
                                     <td><input type="checkbox" name="attr_checkbox_punch" /></td>
                                     <td><h5>Punch</h5></td>
                                     <td><input type="text" value="1d4" name="attr_punch" title="@{punch}" style="width:80px" placeholder="1d4" /></td>
@@ -1156,41 +1156,41 @@ Palladium Megaverse© Character Sheet <br>
                                     <td></td>
                                     <td><h5>Power Attack</h5></td>
                                 </tr>
-                                <tr>    
+                                <tr>
                                     <td><input type="checkbox" name="attr_checkbox_bodyblock" /></td>
                                     <td><h5>Body Block/Tackle</h5></td>
                                     <td><input type="text" value="1d4" name="attr_bodyblock" title="@{bodyblock}" style="width:80px" placeholder="1d4" /></td>
                                     <td><button type="roll" name="attr_bodyblock_roll" title="@{bodyblock_roll}" value="&{template:default} {{name=@{character_name} performs a Body Block/Tackle}} {{Damage=[[@{bodyblock}+@{hth_damage}]], victim loses one melee action and has a [[50+({@{ps}-20,0}kh1)]]% chance of being knocked down losing initiative}}" ></button></td>
                                 </tr>
-                                <tr>    
+                                <tr>
                                     <td><input type="checkbox" name="attr_checkbox_otherattack_0" /></td>
                                     <td><input type="text" name="attr_otherattack_name_0" title="@{otherattack_name_0}" style="width:120px" placeholder="Attack type/name" /></td>
                                     <td><input type="text" name="attr_otherattack_damage_0" title="@{otherattack_damage_0}" style="width:80px" /></td>
                                     <td><button type="roll" name="attr_otherattack_0_roll" title="@{otherattack_0_roll}" value="&{template:default} {{name=@{character_name} attacks with a @{otherattack_name_0}}} {{Damage=[[@{otherattack_damage_0}+@{hth_damage}]]}}" ></button></td>
                                     <td><button type="roll" name="attr_otherpowerattack_0_roll" title="@{otherpowerattack_0_roll}" value="&{template:default} {{name=@{character_name} attacks with a Power @{otherattack_name_0}}} {{Damage=[[(@{otherattack_damage_0}+@{hth_damage})*2]]}}" ></button></td>
                                 </tr>
-                                <tr>    
+                                <tr>
                                     <td><input type="checkbox" name="attr_checkbox_otherattack_1" /></td>
                                     <td><input type="text" name="attr_otherattack_name_1" title="@{otherattack_name_1}" style="width:120px" placeholder="Attack type/name" /></td>
                                     <td><input type="text" name="attr_otherattack_damage_1" title="@{otherattack_damage_1}" style="width:80px" /></td>
                                     <td><button type="roll" name="attr_otherattack_1_roll" title="@{otherattack_1_roll}" value="&{template:default} {{name=@{character_name} attacks with a @{otherattack_name_1}}} {{Damage=[[@{otherattack_damage_1}+@{hth_damage}]]}}" ></button></td>
                                     <td><button type="roll" name="attr_otherpowerattack_1_roll" title="@{otherpowerattack_1_roll}" value="&{template:default} {{name=@{character_name} attacks with a Power @{otherattack_name_1}}} {{Damage=[[(@{otherattack_damage_1}+@{hth_damage})*2]]}}" ></button></td>
                                 </tr>
-                                <tr>    
+                                <tr>
                                     <td><input type="checkbox" name="attr_checkbox_otherattack_2" /></td>
                                     <td><input type="text" name="attr_otherattack_name_2" title="@{otherattack_name_2}" style="width:120px" placeholder="Attack type/name" /></td>
                                     <td><input type="text" name="attr_otherattack_damage_2" title="@{otherattack_damage_2}" style="width:80px" /></td>
                                     <td><button type="roll" name="attr_otherattack_2_roll" title="@{otherattack_2_roll}" value="&{template:default} {{name=@{character_name} attacks with a @{otherattack_name_2}}} {{Damage=[[@{otherattack_damage_2}+@{hth_damage}]]}}" ></button></td>
                                     <td><button type="roll" name="attr_otherpowerattack_2_roll" title="@{otherpowerattack_2_roll}" value="&{template:default} {{name=@{character_name} attacks with a Power @{otherattack_name_2}}} {{Damage=[[(@{otherattack_damage_2}+@{hth_damage})*2]]}}" ></button></td>
                                 </tr>
-                                <tr>    
+                                <tr>
                                     <td><input type="checkbox" name="attr_checkbox_otherattack_3" /></td>
                                     <td><input type="text" name="attr_otherattack_name_3" title="@{otherattack_name_3}" style="width:120px" placeholder="Attack type/name" /></td>
                                     <td><input type="text" name="attr_otherattack_damage_3" title="@{otherattack_damage_3}" style="width:80px" /></td>
                                     <td><button type="roll" name="attr_otherattack_3_roll" title="@{otherattack_3_roll}" value="&{template:default} {{name=@{character_name} attacks with a @{otherattack_name_3}}} {{Damage=[[@{otherattack_damage_3}+@{hth_damage}]]}}" ></button></td>
                                     <td><button type="roll" name="attr_otherpowerattack_3_roll" title="@{otherpowerattack_3_roll}" value="&{template:default} {{name=@{character_name} attacks with a Power @{otherattack_name_3}}} {{Damage=[[(@{otherattack_damage_3}+@{hth_damage})*2]]}}" ></button></td>
                                 </tr>
-                                <tr>    
+                                <tr>
                                     <td><input type="checkbox" name="attr_checkbox_otherattack-4" /></td>
                                     <td><input type="text" name="attr_otherattack_name_4" title="@{otherattack_name_4}" style="width:120px" placeholder="Attack type/name" /></td>
                                     <td><input type="text" name="attr_otherattack_damage_4" title="@{otherattack_damage_4}" style="width:80px" /></td>
@@ -1208,14 +1208,14 @@ Palladium Megaverse© Character Sheet <br>
                                     <td></td>
                                     <td><h5>Power Attack</h5></td>
                                 </tr>
-                                <tr>    
+                                <tr>
                                     <td><input type="checkbox" name="attr_checkbox_kick" /></td>
                                     <td><h5>Kick</h5></td>
                                     <td><input type="text" value="1d8" name="attr_kick" title="@{kick}" style="width:80px" placeholder="1d8" /></td>
                                     <td><button type="roll" name="attr_kick_roll" title="@{kick_roll}" value="&{template:default} {{name=@{character_name} strikes with a Kick}} {{Damage=[[@{kick}+@{hth_damage}]]}}"></button></td>
                                     <td><button type="roll" name="attr_powerkick_roll" title="@{powerkick_roll}" value="&{template:default} {{name=@{character_name} strikes with a Power Kick}} {{Damage=[[(@{kick}+@{hth_damage})*2]]}}"></button></td>
                                 </tr>
-                                <tr>    
+                                <tr>
                                     <td><input type="checkbox" name="attr_checkbox_knee" /></td>
                                     <td><h5>Knee</h5></td>
                                     <td><input type="text" value="1d6" name="attr_knee" title="@{knee}" style="width:80px" placeholder="1d6" /></td>
@@ -1276,7 +1276,7 @@ Palladium Megaverse© Character Sheet <br>
     </div>
     <!robot combat skill>
     <div class="sheet-tabbed-panel">
-        <div class="sheet-row-panel"> 
+        <div class="sheet-row-panel">
             <input type="checkbox" name="attr_robotcombatskill-toggle" class="sheet-arrow" />
             <h4>Robot Combat Skill</h4>
             <div class="body">
@@ -1354,7 +1354,7 @@ Palladium Megaverse© Character Sheet <br>
     <h1>OCC/RCC Abilities</h1>
         <div class="sheet-tabbed-panel">
             <div class="sheet-row-panel">
-            <fieldset class="repeating_occability"> 
+            <fieldset class="repeating_occability">
                     <table style="width:90%">
                         <tr>
                             <td><h5>Name</h5></td>
@@ -1418,5 +1418,5 @@ With updates by Phillip G. https://app.roll20.net/users/239016/phillip-g
 <br>
 And Brian H. https://app.roll20.net/users/1619011/brian-h
 <br>
-Copyright 2013 Palladium Books Inc. Megaverse© is a registered trademark of Palladium. 
+Copyright 2013 Palladium Books Inc. Megaverse© is a registered trademark of Palladium.
 </div>
